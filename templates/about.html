@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock title %}
+
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Page - FantacyDesigns</title>
+   <style>
+       *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+       }
+       body{
+        min-height: 100vh;
+        display: flex-box;
+        align-items: center;
+        justify-content: center;
+        background-color: #f1f1f1;
+    }
+       .about-section{
+        background: url(/static/picc1.jpg) no-repeat left;
+        max-width: 100%!important;
+        height: auto!important;
+        background-size: 55%;
+        background-color: #fdfdfd;
+        overflow: hidden;
+        height: 100%;
+        padding: 100px 0;
+        
+    }
+    img {
+        margin: 0 auto;
+        display: block;
+        margin-top: 0%;
+      }
+      h1{
+        margin-top:0px;
+        font-family:arial;
+      }
+      p{
+        font-family:arial;
+        font-size:14px;
+        text-decoration:none;
+      }
+      .inner-container h1{
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-weight: 900;
+       
+    }
+    .text{
+        font-size: 13px;
+        color: #545454;
+        line-height: 30px;
+        text-align: justify;
+        margin-bottom: 40px;
+    }
+       h1{
+        text-align:center;
+        color: #F85370;
+       }
+      .about-section{
+        padding:150px;
+        float:right;
+      }
+      .inner-container{
+        width: 55%;
+        float: right;
+        background-color: #fdfdfd;
+        padding: 150px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    background:linear-gradient(135deg,rgba(255,255,255,0.1), rgba(255,255,255,0));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter:blur(20px);
+    box-shadow:0 8px 32px 0 rgba(0,0,0,0.37);
+    border:1px solid rgba(255,255,255,0.18);
+    border-radius:32px;
+    }
+    .skills{
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 13px;
+    }
+    @media screen and (max-width:1200px){
+        .inner-container{
+            padding: 80px;
+        }
+    }
+    
+    @media screen and (max-width:1000px){
+        .about-section{
+            background-size: 100%;
+            padding: 100px 40px;
+        }
+        .inner-container{
+            width: 100%;
+        }
+       
+    }
+    
+    @media screen and (max-width:600px){
+        .about-section{
+            padding: 0;
+        }
+        .inner-container{
+            padding: 60px;
+            color:white;
+        }
+        
+    }
+    span{
+      cursor: pointer;
+      font-size: 16px;
+    text-align: center;
+    padding: 10px;
+      width: 500px;
+    }
+    span:hover{
+    background-image: linear-gradient(to right top, #f85370, #f35470, #ee5570, #e8556f, #e3566f);
+    color: #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+    
+    }
+    .activee{
+      background-image: linear-gradient(to right top, #f85370, #f35470, #ee5570, #e8556f, #e3566f);
+      color: #fff;
+      border-radius: 20px;
+    }
+
+   </style>
+</head>
+<body>
+    <div class="about-section">
+        <div class="inner-container">
+            <h1>About Us</h1>
+            
+            <p id="demo"> Hi, I am Jayrajsinh Vaghela. Currently I am Practice for Web Developement, and i am Stu...</p> 
+     <button type="button" style="border:none; background:none;" onclick = "document.getElementById('demo').innerHTML = 'Hi, I am Jayrajsinh Vaghela. Currently I am Practice for Web Developement, and i am Studing in KS School Of Business Management. I want to Occur Web Developer as a Highly Recommanded in IT. This Website is created Using HTML, CSS, JAVASCRIPT, BOOTSTRAP, DJANGO , with Backend.'"><a href="#">read more...</a></button> 
+    
+            <div class="skills">
+                <span class="activee">Web Design</span>
+                <span>Pro Develpor</span>
+                <span>Android Develpor</span>
+            </div>
+        </div>
+    </div>
+    <script>
+            function myfun(){
+                document.getElementbyID('demo').innerHTML="";
+            }
+    </script>
+</body>
+</html>
+{% endblock body %}
+

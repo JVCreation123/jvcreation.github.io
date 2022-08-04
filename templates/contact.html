@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+  </head>
+<body>
+<div class="container-fluid px-0" >
+    {% comment %} <img src="https://source.unsplash.com/1200x400/?phone,contact" class="d-block w-100 mx-0" alt="..."> {% endcomment %}
+    {% comment %} <img src="/static/con1.jpg" class="d-block w-100 mx-0" style="" alt="..."> {% endcomment %}
+</div>
+    <div class="container" style = "position:flex; top:90px; justify-content:center; align-items:center;">
+        <h1 class="text-center" style="font-weight:700; display:flex; margin:30px; justify-content:center; text-align:center;  border-radius:30px; box-shadow:5px 5px 10px black; background:linear-gradient(to right, green,skyblue,blue); text-shadow:5px 3px 7px grey">Contact Us</h1>
+        <form class="row g-3" style="font-weight:800; color:black;  margin:30px; background:linear-gradient(to bottom right, red,blue,lightblue,yellow);" method="post" action="/contact">
+          {% csrf_token %}
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Enter Your Name</label>
+              <input type="text" class="form-control" name="name" id="inputEmail4" placeholder="Enter Your Full Name" autofocus required>
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Email</label>
+              <input type="email" class="form-control" name="email"id="inputPassword4" placeholder="Enter Your Email" required>
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Password</label>
+              <input type="password" class="form-control" name="password" id="inputAddress2" placeholder="Enter Your Password" required>
+            </div>
+
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" name="confirm password"id="inputAddress" placeholder="Confirm Your Password" required>
+            </div>
+            
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">Phone Number</label>
+              <input type="number" class="form-control" name="phone"id="inputCity" placeholder="Enter Your Phone Number" required>
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">State</label>
+              <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>Gujarat</option>
+                <option>Maharastra</option>
+                <option>Rajasthan</option>
+                <option>Delhi</option>
+                <option>Chennai</option>
+                <option>Tamilnadu</option>
+                <option>Aandhrapradesh</option>
+
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Pin Code</label>
+              <input type="number" name="pincode"class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-danger">Sign in</button>
+            </div>
+          </form>
+    </div>
+</div>
+</body>
+</html>
+{% endblock body %}
+
